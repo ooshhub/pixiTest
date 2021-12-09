@@ -5,9 +5,9 @@ experimental framework for Dune game - static updates only
 repo is not linked to active development. An archive to provide comedy value in a few months' time.
 
 # === INITIAL PROJECT (this one) ===
-## === Not live ===
+## Not live
 
-Pre-prototype:
+### Pre-prototype:
 
 Goals:
 --Handle a sample game round with multiple players in server
@@ -26,20 +26,20 @@ Tasks:
 
 
 # === NEW PROJECT ===
-## === Live on git ===
+## Live on git
 
 ### Prototype:
 
 Goals:
---Rewrite with all above learnings in mind. Need to leave option open to move Server to cloud as separate npm build
---Handle selected rounds - probably just Bidding, Movement, Combat
---Allow for multiple rulesets for different version of the board game, but only use 1 for now
---Leave option open for customised rulesets/modding (not a high priority, just needs to be possible)
---Polish client UI/UX
---Use decent assets, at least 2 functional Houses to choose from (Oosh C's work if done, otherwise board-game scan placeholders)
---All required Models / ViewModels should be in place at this stage
---Save/Load gamestate should be possible, and autosave each round. Allow non-hosts to save, like Gloomhaven???
---When this slice of game is playable by 4+ players without crashy-crash, move to Alpha
+-- Rewrite with all above learnings in mind. Need to leave option open to move Server to cloud as separate npm build
+-- Handle selected rounds - probably just Bidding, Movement, Combat
+-- Allow for multiple rulesets for different version of the board game, but only use 1 for now
+-- Leave option open for customised rulesets/modding (not a high priority, just needs to be possible)
+-- Polish client UI/UX
+-- Use decent assets, at least 2 functional Houses to choose from (Oosh C's work if done, otherwise board-game scan placeholders)
+-- All required Models / ViewModels should be in place at this stage
+-- Save/Load gamestate should be possible, and autosave each round. Allow non-hosts to save, like Gloomhaven???
+-- When this slice of game is playable by 4+ players without crashy-crash, move to Alpha
 
 
 ### Alpha:
