@@ -9,7 +9,7 @@ repo is not linked to active development. An archive to provide comedy value in 
 
 ### Pre-prototype:
 
-**Goals:
+**Goals:**
 - Handle a sample game round with multiple players in server
 - Finalise general framework for prototype
 
