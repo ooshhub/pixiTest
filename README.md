@@ -31,7 +31,7 @@ repo is not linked to active development. An archive to provide comedy value in 
 ### Prototype:
 
 **Goals:**
-- Rewrite with all above learnings in mind. Need to leave option open to move Server to cloud as separate npm build
+- Rewrite with all the pre-prototype learnings in mind. Need to leave option open to move Server to cloud as separate npm build
 - Handle selected rounds - probably just Bidding, Movement, Combat
 - Allow for multiple rulesets for different version of the board game, but only use 1 for now
 - Leave option open for customised rulesets/modding (not a high priority, just needs to be possible)
