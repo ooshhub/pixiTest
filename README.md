@@ -22,7 +22,7 @@ repo is not linked to active development. An archive to provide comedy value in 
 - move to event-based debugging - e.g. client window should be able to subscribe to server logging
 - write sample game round e.g. bidding round, event driven and handled by serverHub
 - dump jQuery
-
+- reorganise folder structure, e.g. main process files to go in /modules/main
 
 
 # === NEW PROJECT ===
