@@ -13,7 +13,7 @@ repo is not linked to active development. An archive to provide comedy value in 
 - Handle a sample game round with multiple players in server
 - Finalise general framework for prototype
 
-*Tasks:
+*Tasks:*
 - rewrite server with socket.io
 - remove channels.mjs, replace with server eventHub
 - integrate Tailwind because the C in CSS stands for Cancer, I'm sure of it
@@ -30,7 +30,7 @@ repo is not linked to active development. An archive to provide comedy value in 
 
 ### Prototype:
 
-**Goals:
+**Goals:**
 - Rewrite with all above learnings in mind. Need to leave option open to move Server to cloud as separate npm build
 - Handle selected rounds - probably just Bidding, Movement, Combat
 - Allow for multiple rulesets for different version of the board game, but only use 1 for now
@@ -44,7 +44,7 @@ repo is not linked to active development. An archive to provide comedy value in 
 
 ### Alpha:
 
-**Goals:
+**Goals:**
 - All game Rounds playable, full Turn tracking
 - 4+ functional Houses with assets
 - Another pass on UI elements
@@ -54,7 +54,7 @@ repo is not linked to active development. An archive to provide comedy value in 
 
 
 ### Beta:
-**Goals:
+**Goals:**
 - All content available in game - Houses/rule variants etc.
 - Start finalising artwork, no more placeholders
 - Start finalising audio
