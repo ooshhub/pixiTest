@@ -1,0 +1,23 @@
+{
+  "name": "pixitest",
+  "version": "0.0.1",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ./main.cjs",
+    "nodestart": "node main.cjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^16.0.1",
+    "esm": "^3.2.25",
+    "handlebars": "^4.7.7",
+    "howler": "^2.2.3",
+    "path": "^0.12.7",
+    "pixi.js": "^6.2.0",
+    "ws": "^8.2.3"
+  },
+  "description": ""
+}

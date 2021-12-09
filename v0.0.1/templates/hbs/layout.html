@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<base href="../../">
+    <meta charset="UTF-8">
+		<script src="modules/client/lib/jquery-3.6.0.min.js"></script>
+		<!-- <script type="module" src="public/scripts/pixi.mjs"></script> -->
+		<!-- <script src="public/scripts/viewport.min.js"></script> -->
+		<script type="module" src="modules/client/app.mjs"></script>
+    <script type="module" src="modules/client/mainMenu.mjs"></script>
+    <link rel="stylesheet" href="templates/styles/menu.css">
+		<link rel="stylesheet" href="templates/styles/style.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' ws:; script-src 'self' 'unsafe-eval'">
+    <title>Dune</title>
+  </head>
+	<body>
+    <!-- MAIN MENU -->
+    <main id="mainmenu">
+      <section id="menu">
+        <div id="title">
+          <div class="maintitle">Dune</div>
+        </div>
+        <div class="menu-item">
+          <input type="hidden" class="toggle" value="0" name="expand-host"/>
+          <button id="menu-host" class="expandable">Host Game</button>
+          <div class="toggle-content host">
+            <div class="double-item">
+              <span>Game Name:</span>
+              <input type="text" name="gamename" value="Dune Game"/>
+            </div>
+            <div class="double-item">
+              <span>Port:</span>
+              <input type="text" name="porthost" value="8080"/>
+            </div>
+            <div class="single-item">
+              <button id="launch-host" class="launch">Create Game</button>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button id="menu-join" class="expandable">Join Game</button>
+          <input type="hidden" class="toggle" value="0" name="expand-join"/>
+          <div class="toggle-content join">
+            <div class="double-item">
+              <span>Player Name:</span>
+              <input type="text" name="playername" value="newPlayer"/>
+            </div>
+            <div class="double-item">
+              <span>IP Address:</span>
+              <input type="text" name="ip" placeholder="127.0.0.1"/>
+            </div>
+            <div class="double-item">
+              <span>Port:</span>
+              <input type="text" name="portjoin" value="8080"/>
+            </div>
+            <div class="single-item">
+              <button id="launch-join" class="launch">Join Game</button>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button id="menu-options" class="expandable">Options</button>
+          <input type="hidden" class="toggle" value="0" name="expand-options"/>
+          <div class="toggle-content options">
+            <div class="single-item">
+              <span>OPTIONS ARE FOR PUSSIES</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button id="menu-quit" class="expandable">Exit Game</button>
+        </div>
+      </section>
+      <input type="hidden" name="modalup" value="0"/>
+      <dialog id="loading-modal">
+        <div class="launch-message">Joining server with following options:</div>
+        <div class="error-message"></div>
+        <div class="loading-spinner"><img src="templates/assets/doubleRing.svg"/></div>
+        <button class="modal-button">Cancel</button>
+      </dialog>
+    </main>
+    <!-- GAME SCREEN -->
+    <main id="game">
+    </main>
+	</body>
+</html>

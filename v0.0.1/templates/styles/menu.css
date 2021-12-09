@@ -1,0 +1,174 @@
+@font-face {
+  font-family: dune;
+  src: url("fonts/NEON CLUB MUSIC.otf") format("opentype");
+}
+
+@font-face {
+  font-family: dune;
+  font-weight: bold;
+  src: url("fonts/NEON CLUB MUSIC_bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: dune;
+  font-weight: lighter;
+  src: url("fonts/NEON CLUB MUSIC_light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: dune;
+  font-style: italic;
+  src: url("fonts/NEON CLUB MUSIC_italic.otf") format("opentype");
+}
+
+/* GENERIC & TOP LEVEL */
+main#game.fadein {
+  visibility: visible;
+  opacity: 1.0;
+  transition: opacity 1.0s;
+}
+main#mainmenu.fadeout {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.0s, visibility 0.0s 1.0s;
+}
+
+main#mainmenu {
+  visibility: visible;
+  text-align: center;
+  font-family: dune;
+  background-color: #201900;
+  color: #0ed5d5;
+  text-shadow: 0px 0px 12px #bcffff;
+  font-size: 1.2em;
+  opacity: 1.0;
+  position: absolute;
+}
+
+#mainmenu section {
+  transition: filter 0.5s;
+}
+
+#mainmenu .maintitle {
+  width: 70%;
+  font-size: 10em;
+  font-weight: bold;
+  margin: 1% auto 3% auto;
+  padding-bottom: 3%;
+  border-bottom: 3px solid #1c4f4f;
+}
+
+#mainmenu button {
+  font-size: 2.5em;
+  color: #0ed5d5;
+  text-shadow: 0px 0px 12px #bcffff;
+  border: none;
+  background: none;
+  font-family: dune;
+  font-weight: bold;
+  font-variant: all-small-caps;
+  cursor: pointer;
+  transition: color 0.5s, text-shadow 1s;
+}
+
+#mainmenu input {
+  font-family: dune;
+  font-weight: bold;
+  font-variant: all-small-caps;
+}
+
+#mainmenu .disabled-blur {
+  pointer-events: none;
+  filter: blur(12px);
+  transition: filter 0.5s;
+}
+
+/* MENU ITEM SECTIONS */
+#mainmenu button.expandable:hover {
+  color: #03fbfb;
+  text-shadow: 0px 0px 26px #7bffff;
+  transition: color 0.5s, text-shadow 1s;
+}
+
+#mainmenu .toggle-content {
+  visibility: hidden;
+  width: 20%;
+  margin: 0.5em auto 0.5em auto;
+  border-top: 1px solid #1c4f4f;
+  border-bottom: 1px solid #1c4f4f;
+  opacity: 0.0;
+  max-height: 0px;
+  transition: max-height 0.5s ease-out 0.5s, opacity 0.5s linear, visibility 0.5s;
+}
+
+#mainmenu input.toggle[value="1"]~.toggle-content {
+  visibility: visible;
+  opacity: 1.0;
+  height: auto;
+  max-height: 200px;
+  transition: max-height 1s ease-in-out, opacity 0.5s linear 0.5s;
+}
+
+/* MENU SUBITEMS */
+#mainmenu .double-item {
+  display: grid;
+  grid-template-columns: 40% 55%;
+  grid-column-gap: 5%;
+  margin: 0.5em auto 0.5em auto;
+}
+
+#mainmenu .single-item {
+  margin: 0.5em auto 0.5em auto;
+}
+
+#mainmenu button.launch {
+  font-size: 1.5em;
+  color: #00d01c;
+  text-shadow: 0px 0px 8px #1f0;
+  border: 2px solid #328600;
+  box-shadow: 0px 0px 3px 0px green, 0px 0px 2px 0px green inset;
+  border-radius: 15px;
+  padding: 0em 1em 0.2em 1em;
+  transition: color 0.5s, border 0.5s, text-shadow 1s, box-shadow 1s;
+}
+
+#mainmenu button.launch:hover {
+  color: #00d21d;
+  text-shadow: 0px 0px 12px #aeff94;
+  border: 2px solid #00d21d;
+  box-shadow: 0px 0px 8px 0px #00d21d, 0px 0px 3px 0px #00d21d inset;
+  transition: color 0.5s, border 0.5s, text-shadow 1s, box-shadow 1s;
+}
+
+/* LOADING MODAL */
+dialog {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+input[name="modalup"][value="1"]~#loading-modal {
+  display: block;
+  top: 25%;
+  background: #f1f1f1;
+  font-size: 1.5em;
+  font-weight: bold;
+  opacity: 0.9;
+  visibility: visible;
+  transition: opacity 0.5s ease-out;
+  border-radius: 1em;
+}
+
+.loading-spinner img {
+  height: 100px;
+}
+
+#loading-modal button {
+  color: red;
+  font-size: 1.3em;
+  border: 2px solid #a40000;
+  padding: 0em 1em 0.2em 1em;
+  border-radius: 15px;
+  /* 	box-shadow: 0px 0px 8px 0px #00d21d, 0px 0px 3px 0px #00d21d inset; */
+}

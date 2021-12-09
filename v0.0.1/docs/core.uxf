@@ -1,0 +1,78 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLActor</id><coordinates><x>40</x><y>640</y><w>60</w><h>110</h></coordinates><panel_attributes>Host</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>1090</x><y>630</y><w>60</w><h>110</h></coordinates><panel_attributes>Player 2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>230</x><y>370</y><w>90</w><h>90</h></coordinates><panel_attributes>*Main Process*
+bg=red
+style=autoresize
+--
+main.mjs
+--
+Host Game
+Join Game</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>850</x><y>370</y><w>90</w><h>90</h></coordinates><panel_attributes>*Main Process*
+bg=red
+style=autoresize
+--
+main.mjs
+--
+Host Game
+Join Game</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>530</x><y>410</y><w>100</w><h>80</h></coordinates><panel_attributes>*Game Server*
+bg=#900090
+style=autoresize
+--
+server.mjs
+--
+Control sockets</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>20</x><y>380</y><w>90</w><h>60</h></coordinates><panel_attributes>*Local Storage*
+--
+File system
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>410</y><w>240</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+fg=gray
+Start server</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>230</x><y>600</y><w>90</w><h>90</h></coordinates><panel_attributes>*Renderer*
+bg=green
+style=autoresize
+--
+app.mjs
+--
+Join server
+Render screen</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>450</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+fg=pink</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>850</x><y>600</y><w>90</w><h>90</h></coordinates><panel_attributes>*Renderer*
+bg=green
+style=autoresize
+--
+app.mjs
+--
+Join server
+Render screen</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>450</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+fg=pink</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>480</y><w>240</w><h>140</h></coordinates><panel_attributes>lt=&lt;.&gt;
+webSocket
+fg=#ff0090</panel_attributes><additional_attributes>10;120;220;10</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>480</y><w>250</w><h>140</h></coordinates><panel_attributes>lt=&lt;.&gt;
+*webSocket*
+fg=#ff0090</panel_attributes><additional_attributes>10;10;230;120</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>270</y><w>230</w><h>150</h></coordinates><panel_attributes>lt=&lt;.&gt;
+mainHub &lt;&gt; serverHub
+fg=cyan</panel_attributes><additional_attributes>10;130;210;10</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>450</y><w>140</w><h>170</h></coordinates><panel_attributes>lt=&lt;.&gt;
+fg=cyan
+localHub &lt;&gt; mainHub</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>520</x><y>210</y><w>120</w><h>120</h></coordinates><panel_attributes>serverHub
+--
+Control game logic
+Chat server
+bg=magenta</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>320</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;.&gt;
+fg=cyan</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>450</y><w>140</w><h>170</h></coordinates><panel_attributes>lt=&lt;.&gt;
+fg=cyan
+localHub &lt;&gt; mainHub</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>390</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;.&gt;
+nodeFs
+fg=cyan</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>390</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;.&gt;
+nodeFs
+fg=cyan</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>1060</x><y>390</y><w>90</w><h>60</h></coordinates><panel_attributes>*Local Storage*
+--
+File system
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>450</y><w>190</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+fg=pink
+Start game</panel_attributes><additional_attributes>170;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>630</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;.&gt;
+fg=gray</panel_attributes><additional_attributes>10;30;130;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>1000</x><y>640</y><w>20</w><h>40</h></coordinates><panel_attributes>bg=gray
+U
+X
+transparency=0
+layer=2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>450</y><w>180</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+fg=pink
+Start game</panel_attributes><additional_attributes>10;10;160;230</additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>630</y><w>180</w><h>80</h></coordinates><panel_attributes>lt=&lt;.&gt;
+fg=gray</panel_attributes><additional_attributes>10;10;160;60</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>160</x><y>630</y><w>20</w><h>40</h></coordinates><panel_attributes>bg=gray
+U
+X
+transparency=0
+layer=2</panel_attributes><additional_attributes></additional_attributes></element></diagram>

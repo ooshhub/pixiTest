@@ -1,0 +1,8 @@
+{
+	"displayName": "newPlayer",
+	"colour": "#ffffff",
+	"chatWindow": {
+		"x": 300,
+		"y": 200
+	}
+}
