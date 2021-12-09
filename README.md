@@ -4,8 +4,8 @@ experimental framework for Dune game - static updates only
 ## No live updates
 repo is not linked to active development. An archive to provide comedy value in a few months' time.
 
-#=== INITIAL PROJECT (this one) ===
-##=== Not live ===
+# === INITIAL PROJECT (this one) ===
+## === Not live ===
 
 Pre-prototype:
 
@@ -25,10 +25,10 @@ Tasks:
 
 
 
-#=== NEW PROJECT ===
-##=== Live on git ===
+# === NEW PROJECT ===
+## === Live on git ===
 
-###Prototype:
+### Prototype:
 
 Goals:
 --Rewrite with all above learnings in mind. Need to leave option open to move Server to cloud as separate npm build
@@ -42,7 +42,7 @@ Goals:
 --When this slice of game is playable by 4+ players without crashy-crash, move to Alpha
 
 
-###Alpha:
+### Alpha:
 
 Goals:
 --All game Rounds playable, full Turn tracking
@@ -53,7 +53,7 @@ Goals:
 --When game is stable from start to finish, move to Beta
 
 
-###Beta:
+### Beta:
 Goals:
 --All content available in game - Houses/rule variants etc.
 --Start finalising artwork, no more placeholders
