@@ -1,0 +1,17 @@
+{
+	"displayName": "newPlayer",
+	"colour": "#ffffff",
+	"chatWindow": {
+		"x": 300,
+		"y": 200
+	},
+	"host": {
+		"lastGameName": "Dune Game",
+		"lastPort": 8080
+	},
+	"player": {
+		"name": "",
+		"id": null,
+		"color": "#ffffff"
+	}
+}

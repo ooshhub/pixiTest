@@ -1,0 +1,79 @@
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📂audio
+ ┃ ┃ ┣ 📂music
+ ┃ ┃ ┗ 📂sounds
+ ┃ ┣ 📂cards
+ ┃ ┣ 📂tokens
+ ┣ 📂client
+ ┃ ┣ 📂modules
+ ┃ ┃ ┣ 📂lib
+ ┃ ┃ ┃ ┣ 📜howler.js
+ ┃ ┃ ┃ ┣ 📜jquery-3.6.0.min.js
+ ┃ ┃ ┃ ┣ 📜pixi.mjs
+ ┃ ┃ ┃ ┣ 📜pixi.mjs.map
+ ┃ ┃ ┃ ┗ 📜socket.io.esm.min.js
+ ┃ ┃ ┣ 📜app.mjs
+ ┃ ┃ ┣ 📜clientHelpers.mjs
+ ┃ ┃ ┣ 📜mainMenu.mjs
+ ┃ ┃ ┣ 📜pixiUI.mjs
+ ┃ ┃ ┣ 📜preload.cjs
+ ┃ ┃ ┣ 📜preload.mjs
+ ┃ ┃ ┣ 📜rendererHub.mjs
+ ┃ ┃ ┣ 📜SocketClient.mjs
+ ┃ ┃ ┗ 📜ui.mjs
+ ┃ ┣ 📂templates
+ ┃ ┃ ┣ 📂assets
+ ┃ ┃ ┃ ┣ 📜doubleRing.svg
+ ┃ ┃ ┃ ┣ 📜iconAlpha.ico
+ ┃ ┃ ┃ ┣ 📜iconAlpha.png
+ ┃ ┃ ┃ ┗ 📜iconBrown.png
+ ┃ ┃ ┣ 📂html
+ ┃ ┃ ┃ ┣ 📜layout.html
+ ┃ ┃ ┃ ┣ 📜menuBody.hbs
+ ┃ ┃ ┃ ┣ 📜menuItems.mjs
+ ┃ ┃ ┃ ┣ 📜menuLayout.html
+ ┃ ┃ ┃ ┣ 📜settingsMenu.hbs
+ ┃ ┃ ┃ ┣ 📜test.html
+ ┃ ┃ ┃ ┗ 📜testlab.hbs
+ ┃ ┃ ┣ 📂styles
+ ┃ ┃ ┃ ┣ 📂fonts
+ ┃ ┃ ┃ ┃ ┣ 📜NEON CLUB MUSIC.otf
+ ┃ ┃ ┃ ┃ ┣ 📜NEON CLUB MUSIC_bold.otf
+ ┃ ┃ ┃ ┃ ┣ 📜NEON CLUB MUSIC_italic.otf
+ ┃ ┃ ┃ ┃ ┣ 📜NEON CLUB MUSIC_light.otf
+ ┃ ┃ ┃ ┃ ┣ 📜NEON CLUB MUSIC_medium.otf
+ ┃ ┃ ┃ ┃ ┗ 📜NEON CLUB MUSIC_READ ME.txt
+ ┃ ┃ ┃ ┣ 📜main.css
+ ┃ ┃ ┃ ┣ 📜main_input.css
+ ┃ ┃ ┃ ┣ 📜menu.css
+ ┃ ┃ ┃ ┗ 📜style.css
+ ┃ ┃ ┗ 📜mainMenu.html
+ ┃ ┗ 📂viewModels
+ ┃ ┃ ┣ 📂assets
+ ┃ ┃ ┃ ┗ 📜tube.png
+ ┃ ┃ ┣ 📜cards.mjs
+ ┃ ┃ ┣ 📜tiles.mjs
+ ┃ ┃ ┗ 📜tokens.mjs
+ ┣ 📂common
+ ┃ ┣ 📜debug.mjs
+ ┃ ┣ 📜EventHub.mjs
+ ┃ ┗ 📜helpers.mjs
+ ┣ 📂config
+ ┃ ┗ 📜defaultUserSettings.json
+ ┣ 📂main
+ ┃ ┣ 📜mainHelpers.mjs
+ ┃ ┗ 📜mainHub.mjs
+ ┣ 📂server
+ ┃ ┣ 📂data
+ ┃ ┣ 📂models
+ ┃ ┃ ┣ 📜Cards.mjs
+ ┃ ┃ ┗ 📜GameState.mjs
+ ┃ ┗ 📂modules
+ ┃ ┃ ┣ 📂gameData
+ ┃ ┃ ┃ ┗ 📜rulesets.mjs
+ ┃ ┃ ┣ 📜serverHelpers.mjs
+ ┃ ┃ ┣ 📜serverHub.mjs
+ ┃ ┃ ┗ 📜SocketServer.mjs
+ ┣ 📜main.cjs
+ ┗ 📜main.mjs

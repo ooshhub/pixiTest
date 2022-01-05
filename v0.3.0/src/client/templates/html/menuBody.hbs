@@ -1,0 +1,29 @@
+<div class="maintitle">DUNE</div>
+{{!-- HOST GAME --}}
+{{#each menuItems as |item itemId|}}
+	<div class="menu-item">
+		{{#if item.expandable}}<input type="hidden" class="toggle" value="0" name="expand-{{item.id}}"/>{{/if}}
+		<button id="menu-{{item.id}}" class="{{item.class}}">{{item.label}}</button>
+		{{#if item.expandable}}<div class="toggle-content {{item.id}}">{{/if}}
+			{{#each item.subItems as |sub subId|}}
+				<div class="{{sub.class}}">
+					{{#if sub.button}}
+						<button id="{{sub.id}}" class="{{sub.subClass}}">{{sub.label}}</button>
+					{{/if}}
+					{{#if sub.input}}
+						<span>{{sub.label}}</span>
+						<input type="{{sub.type}}" id="{{sub.id}}" class="{{sub.subClass}}" name="{{sub.name}}" value="{{sub.setting}}"/>
+					{{/if}}
+				</div>
+			{{/each}}
+		{{#if item.expandable}}</div>{{/if}}
+	</div>
+{{/each}}
+
+<input type="hidden" name="modalup" value="0"/>
+<dialog id="loading-modal">
+	<div class="launch-message">Joining server with following options:</div>
+	<div class="error-message"></div>
+	<div class="loading-spinner"><img src="templates/assets/doubleRing.svg"/></div>
+	<button class="modal-button">Cancel</button>
+</dialog>

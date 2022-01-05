@@ -1,0 +1,119 @@
+@import './style.css';
+
+@font-face {
+  font-family: dune;
+  src: url("fonts/NEON CLUB MUSIC.otf") format("opentype");
+}
+@font-face {
+  font-family: dune;
+  font-weight: bold;
+  src: url("fonts/NEON CLUB MUSIC_bold.otf") format("opentype");
+}
+@font-face {
+  font-family: dune;
+  font-weight: lighter;
+  src: url("fonts/NEON CLUB MUSIC_light.otf") format("opentype");
+}
+@font-face {
+  font-family: dune;
+  font-style: italic;
+  src: url("fonts/NEON CLUB MUSIC_italic.otf") format("opentype");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	#mainmenu button {
+		@apply text-2xl text-[color:var(--duneCyan)] border-0 font-bold uppercase cursor-pointer my-1;
+		text-shadow: 0px 0px 12px #bcffff;
+		transition: color 0.5s, text-shadow 1s;
+	}
+}
+:root {
+	--duneBrown: #201900;
+	--duneCyan: #0ed5d5;
+	--duneCyanBright: #03fbfb;
+	--duneCyanBrighter: #7bffff;
+	--duneCyanDark: #1c4f4f;
+	--duneGreen: #00d01c;
+	--duneGreenBright: #328600;
+	--duneGreenBrighter: #00d21d;
+	font-size: 1.5rem;
+	user-select: none;
+}
+
+/*
+MAIN MENU
+*/
+
+	/* General */
+	.disabled { pointer-events: none; cursor: not-allowed; filter: grayscale(70%) }
+	input.disabled { @apply bg-slate-400 pointer-events-auto } 
+
+	main#mainmenu {
+		@apply visible text-center font-['dune'] absolute w-screen h-screen;
+		color: var(--duneCyan);
+		background-color: var(--duneBrown);
+		text-shadow: 0px 0px 12px #bcffff;
+	}
+	.maintitle {
+		@apply capitalize w-8/12 min-w-min text-9xl font-bold mt-1 mb-8 mx-auto pb-8;
+		border-bottom: 3px solid var(--duneCyanDark);
+	}
+	#mainmenu input {	@apply text-sm font-mono font-normal text-black px-1 rounded; }
+
+	/* Expandable Sections */
+	#mainmenu button.expandable:hover {
+		@apply text-[color:var(--duneCyanBright)] transition-colors duration-500;
+		text-shadow: 0px 0px 26px var(--duneCyanBrighter);
+		transition: color 0.5s, text-shadow 1s;
+	}
+
+	#mainmenu .toggle-content {
+		@apply w-2/5 mx-auto my-0.5 border-t border-b border-[color:var(--duneCyanDark)] max-h-0 opacity-0 invisible;
+		transition: max-height 0.5s ease-out 0.5s, opacity 0.5s linear, visibility 0.5s;
+	}
+	#mainmenu input.toggle[value="1"] ~ .toggle-content {
+		@apply visible opacity-100 h-auto max-h-[200px];
+		transition: max-height 1s ease-in-out, opacity 0.5s linear 0.5s;
+	}
+
+	/* Section Items */
+	#mainmenu .double-item {
+		@apply grid mx-auto my-0.5 py-2;
+		grid-template-columns: 40% 55%;
+		grid-column-gap: 5%;
+	}
+	#mainmenu .single-item { @apply grid mx-auto my-0.5; }
+
+	#mainmenu button.launch {
+		@apply text-base text-[color:var(--duneGreen)] border-2 border-[color:var(--duneGreenBright)] rounded py-1 px-2 w-max mx-auto;
+		box-shadow: 0px 0px 3px 0px green, 0px 0px 2px 0px green inset;
+		text-shadow: 0px 0px 8px #1f0;
+		transition: color 0.5s, border 0.5s, text-shadow 1s, box-shadow 1s;
+	}
+	#mainmenu button.launch:hover {
+		@apply text-[color:var(--duneGreenBrighter)] border-[color:var(--duneGreenBrighter)];
+		text-shadow: 0px 0px 12px #aeff94;
+		box-shadow: 0px 0px 8px 0px #00d21d, 0px 0px 3px 0px #00d21d inset;
+		transition: color 0.5s, border 0.5s, text-shadow 1s, box-shadow 1s;
+	}
+
+	/* Modal */	
+	dialog {
+		@apply block invisible opacity-0;
+		transition: opacity 0.3s;
+	}
+	input[name="modalup"][value="1"] ~ #loading-modal {
+		@apply top-1/4 bg-[color:#f1f1f1] text-2xl font-bold opacity-90 visible rounded-md;
+		transition: opacity 0.3s;
+	}
+	.loading-spinner { @apply mx-auto text-center }
+	.loading-spinner img { height: 100px; }
+
+	#loading-modal button {
+		@apply text-red-700 border-2 border-[color:#a40000] px-4 py-1 rounded-md;
+	}
+

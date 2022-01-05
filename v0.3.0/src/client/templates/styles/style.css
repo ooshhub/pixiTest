@@ -1,0 +1,185 @@
+input[name="activePage"][value="game"] ~ #game,
+input[name="activePage"][value="mainmenu"] ~ #mainmenu {
+	display: block;
+	opacity: 1.0;
+}
+input[name="activePage"][value="game"] ~ #mainmenu,
+input[name="activePage"][value="mainmenu"] ~ #game {
+	display:none;
+}
+
+#game {
+  display: none;
+  position: static;
+  width: 100vw;
+  height: 100vh;
+	opacity: 0;
+}
+#mainmenu {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: +100;
+	opacity: 0;
+}
+
+
+/* CANVAS */
+#canvas {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	color: #646464
+}
+
+/* CHAT */
+#chat {
+	font-size: 20px;
+	position:fixed;
+	background: black;
+	min-height: 200px;
+	min-width: 200px;
+	bottom: 1vh;
+	right: 1vw;
+	opacity: 0.8;
+	border-radius: 10px;
+	display: grid;
+	grid-template-rows: 0 1fr 1.8em;
+}
+
+#chat .log {
+	font-size: 1em;
+	-bottom: 1px solid white;
+	margin: 8px;
+	max-height: 100%;
+	overflow: auto;
+	position: relative;
+	bottom: 0px;
+}
+#chat .chat-message {
+	color: #a7ac01;
+}
+#chat .chat-message:nth-child(even) {
+    color: #947900;
+}
+.chat-message .chat-content {
+	margin-left: 0.3em;
+}
+
+#chat .input {
+	position: relative;
+	border-top: 1px solid #afafaf;
+}
+
+#chat .input textarea {
+	overflow-y: hidden;
+	position: absolute;
+	font: inherit;
+	resize: none;
+	width: 97%;
+	height: 1.5em;
+	line-height: 1.3em;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	left: 50%;
+	background: none;
+	border: none;
+	color: #fff;
+	/* padding: 5px; */
+}
+#chat .input textarea:focus {
+	outline: none;
+}
+#chat .resize-handle {
+	width: 8px;
+	height: 8px;
+	position: relative;
+	left: 5px;
+	top: 5px;
+	cursor: nwse-resize;
+	z-index: +10;
+}
+.arrow.up-left {
+	width: 0;
+	height: 0;
+	border-top: 5px solid #5c5c5c;
+	border-left: 5px solid #5c5c5c;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+}
+
+/* UI */
+#ui {
+	position: fixed;
+	right: 5%;
+	top: 5%;
+	user-select: none;
+}
+#ui button {
+	transform: scale(1.5);
+}
+
+/* MAIN MENU */
+#ingamemenu {
+	visibility: visible;
+	opacity: 1.0;
+	font-size: 1.1em;
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	background-color: #037561;
+	padding: 0% 2% 2% 2%;
+	border: 3px solid #079583;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 3px #04042e;
+	z-index:+100;
+	width: 30vw
+}
+#ingamemenu.show { display: block }
+
+#ingamemenu h4 {
+    text-align: center;
+    margin: 2%;
+    color: #4f0b0b;
+    border-bottom: #4f0b0b solid 1px;
+    font-size: 1.7em;
+}
+#ingamemenu .container {
+	display: grid;
+	grid-template-columns: 100%;
+	justify-items: center;
+}
+#ingamemenu .section {
+	width: 90%;
+	display: grid;
+	grid-template-columns: 100%;
+	align-items: center;
+}
+#ingamemenu .setting {
+	display: grid;
+	grid-template-columns: 40% 58%;
+	grid-column-gap: 2%;
+	margin: 0.2em 0 0.2em 0;
+}
+
+
+/* GENERICS */
+.custom-scroll::-webkit-scrollbar {
+	background-color: #047360;
+	width: 0.4em;
+	border: 1px solid #025546;
+	border-radius: 5px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+	background-color: #03977d;
+	border: 1px solid #025546;
+	border-radius: 5px;
+}
+
+body {
+	font-family: corbel;
+	font-weight: bold
+}

@@ -1,0 +1,2 @@
+- sockets not closing properly. Do references need to be removed?
+- multiple (4x) requests for everything on re-connect

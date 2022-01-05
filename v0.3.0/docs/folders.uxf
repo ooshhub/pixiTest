@@ -1,0 +1,26 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLHierarchy</id><coordinates><x>170</x><y>10</y><w>320</w><h>760</h></coordinates><panel_attributes>type=Package
+Dune
+	assets
+		cards
+		tokens
+		tiles
+		audio
+		ui
+	client
+		modules
+			lib
+		viewModels
+	common
+		modules
+	config
+	main
+		modules
+	server
+		modules
+		models
+	templates
+		assets
+		html
+		styles
+bg=#003590
+fg=white</panel_attributes><additional_attributes></additional_attributes></element></diagram>

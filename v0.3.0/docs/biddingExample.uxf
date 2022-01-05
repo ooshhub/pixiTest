@@ -1,0 +1,51 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLActor</id><coordinates><x>250</x><y>480</y><w>60</w><h>110</h></coordinates><panel_attributes>User</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>730</x><y>120</y><w>100</w><h>40</h></coordinates><panel_attributes>SERVER
+bg=#ff00ff
+fg=#ffffff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>150</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>270</y><w>100</w><h>30</h></coordinates><panel_attributes>*CardDeck*
+bg=green
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>440</y><w>100</w><h>30</h></coordinates><panel_attributes>*Card*
+bg=green
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>240</y><w>210</w><h>70</h></coordinates><panel_attributes>Create card deck
+--
+Server creates deck &amp; deck logic
+Server shuffles</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>270</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>UMLState</id><coordinates><x>440</x><y>120</y><w>100</w><h>40</h></coordinates><panel_attributes>CLIENT
+bg=#af1010
+fg=#ffffff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>410</y><w>210</w><h>70</h></coordinates><panel_attributes>Notify clients of cards
+--
+Notify by cardID
+Client constructs card graphics
+Card uses back texture</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>390</y><w>110</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;50;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>450</y><w>400</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;380;10</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>150</y><w>30</w><h>280</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;260;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>510</y><w>210</w><h>70</h></coordinates><panel_attributes>Users bid on card
+--
+Rounds of bidding
+Final bid sent to server to verify</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>450</y><w>110</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;90;10;60;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>520</y><w>210</w><h>70</h></coordinates><panel_attributes>Winner now owns card
+--
+loanCard()
+card.push(this.loaned)
+Notify clients</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>540</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>620</y><w>160</w><h>150</h></coordinates><panel_attributes>Client actions
+--
+style=autoresize
+WINNER:
+card.toHand()
+- card becomes interactive
+- card flips to front
+
+OTHERS:
+card.destroy()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>580</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>350</y><w>210</w><h>70</h></coordinates><panel_attributes>Bidding round
+--
+Server deals 4 cards
+Server notifies clients</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>300</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>490</y><w>380</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;20;360;10;360;70;300;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>550</y><w>100</w><h>30</h></coordinates><panel_attributes>More cards?
+bg=#600060
+layer=1
+transparency=0
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>520</y><w>110</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>830</x><y>700</y><w>210</w><h>70</h></coordinates><panel_attributes>Bidding over
+--
+All cards claimed or discarded
+Server moves to next round
+Server notifies clients</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>570</y><w>40</w><h>150</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;130;20;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>480</y><w>40</w><h>40</h></coordinates><panel_attributes>Yes
+bg=#600060
+layer=1
+transparency=0
+style=autoresize</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>620</y><w>40</w><h>40</h></coordinates><panel_attributes>No
+bg=#600060
+layer=1
+transparency=0
+style=autoresize</panel_attributes><additional_attributes></additional_attributes></element></diagram>
